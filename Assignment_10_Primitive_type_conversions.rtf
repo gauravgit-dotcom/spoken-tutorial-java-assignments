@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 10: Primitive type conversions\
+====================================================================\
+\
+QUESTION:\
+Primitive type conversions\
+\
+(a) Read about Integer.toString and Float.toString\
+\
+(b) What do they do?\
+\
+ANSWER : Read about Integer.toString and Float.toString\
+\
+In Java, every primitive data type has corresponding wrapper classes that provide various utility methods for working with primitive values. Two such wrapper classes are:\
+\
+Integer \'96 for the primitive data type int\
+\
+Float \'96 for the primitive data type float\
+\
+\
+These classes include a method called toString(), which is used to convert the primitive numeric value into its String representation.\
+\
+1. Integer.toString(int value)\
+\
+This method takes an integer (int) as input and returns its equivalent value in String format.\
+\
+Syntax:\
+\
+String str = Integer.toString(123);\
+\
+Internally, Java converts the numeric value into a character sequence that represents the digits of the number in base 10 and returns it as a String.\
+\
+\
+2. Float.toString(float value)\
+\
+This method takes a float value as input and returns its string representation.\
+\
+Syntax:\
+\
+String str = Float.toString(12.34f);\
+\
+The output is a String that includes the decimal point and all digits necessary to uniquely identify the value.\
+\
+\
+Use Cases:\
+\
+Converting numeric data for display in a user interface.\
+\
+Concatenating numeric values with text.\
+\
+Logging values as part of messages or debug output.\
+\
+Storing numeric values in text files or databases that accept strings.\
+\
+Why Use toString?\
+\
+Using toString ensures that the data remains human-readable and compatible with APIs that require string inputs. It also avoids manual string formatting or concatenation techniques, ensuring clarity and correctness.\
+\
+(b) What do they do?\
+\
+These methods are useful when you want to convert numeric values into strings for display, concatenation with other strings, or storage in text-based data formats.\
+\
+Integer.toString(int value) takes an integer and returns its string equivalent.\
+\
+Float.toString(float value) does the same for a floating-point number.\
+\
+\
+This is especially useful when working with GUIs, file I/O, network programming, or preparing data for logging and debugging.\
+\
+Example Java Code:\
+\
+public class PrimitiveConversionExample \{\
+    public static void main(String[] args) \{\
+        // Declare primitive numeric variables\
+        int intValue = 100;\
+        float floatValue = 25.75f;\
+\
+        // Convert primitives to String using toString methods\
+        String intAsString = Integer.toString(intValue);\
+        String floatAsString = Float.toString(floatValue);\
+\
+        // Display the converted strings\
+        System.out.println("Integer as String: " + intAsString);\
+        System.out.println("Float as String: " + floatAsString);\
+\
+        // Example: String concatenation using converted values\
+        String resultMessage = "Converted values are: " + intAsString + " and " + floatAsString;\
+        System.out.println(resultMessage);\
+    \}\
+\}\
+\
+Output:\
+\
+Integer as String: 100\
+Float as String: 25.75\
+Converted values are: 100 and 25.75\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya }

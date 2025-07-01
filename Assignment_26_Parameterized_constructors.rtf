@@ -1,0 +1,104 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 26: Parameterized constructors\
+====================================================================\
+\
+QUESTION:\
+Parameterized constructors\
+\
+(a) Create a class Employee\
+\
+(b) Create constructors with different number of parameters\
+\
+ANSWER\
+Java Code:\
+\
+public class Employee \{\
+\
+    // Instance variables\
+    int emp_no;\
+    String emp_name;\
+    double salary;\
+\
+    // Constructor with 1 parameter\
+    Employee(int emp_no) \{\
+        this.emp_no = emp_no;\
+        this.emp_name = "Not Assigned";\
+        this.salary = 0.0;\
+    \}\
+\
+    // Constructor with 2 parameters\
+    Employee(int emp_no, String emp_name) \{\
+        this.emp_no = emp_no;\
+        this.emp_name = emp_name;\
+        this.salary = 0.0;\
+    \}\
+\
+    // Constructor with 3 parameters\
+    Employee(int emp_no, String emp_name, double salary) \{\
+        this.emp_no = emp_no;\
+        this.emp_name = emp_name;\
+        this.salary = salary;\
+    \}\
+\
+    // Method to display employee details\
+    void display() \{\
+        System.out.println("Employee No: " + emp_no);\
+        System.out.println("Employee Name: " + emp_name);\
+        System.out.println("Salary: " + salary);\
+        System.out.println("-------------------------");\
+    \}\
+\
+    // Main method to test the constructors\
+    public static void main(String[] args) \{\
+        // Using constructor with 1 parameter\
+        Employee e1 = new Employee(1001);\
+        e1.display();\
+\
+        // Using constructor with 2 parameters\
+        Employee e2 = new Employee(1002, "Amit");\
+        e2.display();\
+\
+        // Using constructor with 3 parameters\
+        Employee e3 = new Employee(1003, "Neha", 55000.50);\
+        e3.display();\
+    \}\
+\}\
+\
+\
+Output:\
+\
+Employee No: 1001\
+Employee Name: Not Assigned\
+Salary: 0.0\
+-------------------------\
+Employee No: 1002\
+Employee Name: Amit\
+Salary: 0.0\
+-------------------------\
+Employee No: 1003\
+Employee Name: Neha\
+Salary: 55000.5\
+-------------------------\
+\
+Explanation:\
+\
+The class Employee has three instance variables: emp_no, emp_name, and salary.\
+\
+It includes three parameterized constructors, each accepting a different number of parameters.\
+\
+The display() method prints the details of each employee.\
+\
+This demonstrates constructor overloading \'97 multiple constructors with different parameter lists.\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya  }

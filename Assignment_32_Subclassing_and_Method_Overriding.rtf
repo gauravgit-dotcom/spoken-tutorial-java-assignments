@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 32: Subclassing and Method Overriding\
+====================================================================\
+\
+QUESTION:\
+Subclassing and Method Overriding\
+\
+(a) Create a class Vehicle which has a method run() that prints: The Vehicle is running\
+\
+(b) Also create a class Bike which has a method run() that prints: The Bike is running safely\
+\
+(c) The output should be: The Bike is running safely\
+\
+ANSWER\
+// Parent class\
+class Vehicle \{\
+    void run() \{\
+        System.out.println("The Vehicle is running");\
+    \}\
+\}\
+\
+// Subclass that overrides run() method\
+class Bike extends Vehicle \{\
+    @Override\
+    void run() \{\
+        System.out.println("The Bike is running safely");\
+    \}\
+\}\
+\
+// Test class\
+public class TestOverride \{\
+    public static void main(String[] args) \{\
+        Vehicle obj = new Bike();  // Upcasting\
+        obj.run();  // Calls Bike's overridden method\
+    \}\
+\}\
+\
+Output:\
+The Bike is running safely\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya }

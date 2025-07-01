@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 09: Strings\
+====================================================================\
+\
+QUESTION:\
+\
+Strings\
+\
+(a) For more details read about the concat method of Strings in Java\
+\
+(b) Find out how it is different from adding Strings\
+\
+ANSWER : Read about the concat() method of Strings in Java\
+\
+In Java, the concat() method is a built-in method of the String class that is used to join or combine two strings into one. It returns a new string that is the result of appending the second string to the end of the first one.\
+\
+Syntax:\
+\
+String str1 = "Hello";\
+String str2 = "World";\
+String result = str1.concat(str2);  // result = "HelloWorld"\
+\
+Key Points:\
+\
+concat() does not modify the original string (since strings in Java are immutable).\
+\
+It can only concatenate strings. Passing a null reference will throw a NullPointerException.\
+\
+It is a method of the String class, available in java.lang.\
+\
+\
+(b) How is concat() different from adding Strings using + operator?\
+\
+The concat() method and the + operator are both used in Java to combine strings, but they differ in a few important ways:\
+\
+1. Syntax and Readability:\
+The + operator is more readable and commonly used in practice. For example, str1 + str2 is easier to understand than str1.concat(str2).\
+\
+\
+2. Input Flexibility:\
+The + operator is more flexible. It can combine strings with other data types such as integers, characters, or even objects. Java automatically converts these to string format.\
+On the other hand, the concat() method only accepts string arguments. If you try to pass anything else (like an integer or a null), it may cause errors.\
+\
+\
+3. Null Handling:\
+Using concat() with a null value causes a NullPointerException. But when using the + operator, Java treats null as the string "null" and does not throw an error.\
+\
+\
+4. Performance:\
+In simple string concatenations, both approaches perform similarly. However, the compiler optimizes the + operator internally using a StringBuilder, especially in loops, which can result in better performance in more complex scenarios.\
+\
+\
+5. Mutability:\
+Both concat() and + do not modify the original string because strings in Java are immutable. Instead, they return a new string.\
+\
+Example:\
+\
+String name = "Alice";\
+\
+// Using concat()\
+String result1 = name.concat(" Smith");\
+\
+// Using +\
+String result2 = name + " Smith";\
+\
+Both methods will give the same result: "Alice Smith", but the + operator is preferred in most practical scenarios due to its simplicity and flexibility.\
+\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya }

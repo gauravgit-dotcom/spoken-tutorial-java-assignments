@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 14: Nested if\
+====================================================================\
+\
+QUESTION:\
+Nested if\
+\
+Write java programs to:\
+\
+ (a) Check whether a given number is even and also a multiple of 11 using nested-if\
+\
+ (b) Identify the largest number among the two given numbers using Ternary operator\
+\
+ANSWER\
+Java Program to check whether a number is even and also a multiple of 11 using nested-if:\
+\
+Code:\
+\
+public class EvenAndMultipleOf11 \{\
+    public static void main(String[] args) \{\
+        int number = 66; // You can change the number for testing\
+\
+        if (number % 2 == 0) \{\
+            if (number % 11 == 0) \{\
+                System.out.println(number + " is even and also a multiple of 11.");\
+            \} else \{\
+                System.out.println(number + " is even but not a multiple of 11.");\
+            \}\
+        \} else \{\
+            System.out.println(number + " is not even.");\
+        \}\
+    \}\
+\}\
+\
+Explanation:\
+\
+The outer if checks if the number is even using number % 2 == 0.\
+\
+The inner if checks if it's also a multiple of 11 using number % 11 == 0.\
+\
+This is a classic use case of nested-if statements.\
+\
+\
+Sample Output:\
+\
+66 is even and also a multiple of 11.\
+\
+\
+\
+java Program to identify the largest number using Ternary Operator:\
+\
+Code:\
+\
+public class LargestUsingTernary \{\
+    public static void main(String[] args) \{\
+        int num1 = 25;\
+        int num2 = 45;\
+\
+        int largest = (num1 > num2) ? num1 : num2;\
+\
+        System.out.println("The largest number is: " + largest);\
+    \}\
+\}\
+\
+Explanation:\
+\
+The ternary operator syntax: (condition) ? value_if_true : value_if_false.\
+\
+Here, it checks if num1 > num2 and returns the larger one.\
+\
+It's a compact alternative to using if-else statements.\
+\
+\
+Sample Output:\
+\
+The largest number is: 45\
+\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya }

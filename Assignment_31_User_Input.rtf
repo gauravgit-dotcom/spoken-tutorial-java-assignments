@@ -1,0 +1,78 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 31: User Input\
+====================================================================\
+\
+QUESTION:\
+User Input\
+\
+(a) Take a float, byte and character input from the user\
+\
+(b) Display the output on the console\
+\
+(c) Take a number as input and divide it by 3 \
+\
+(d) Display the output on the console\
+\
+ANSWER\
+import java.util.Scanner;\
+\
+public class UserInputExample \{\
+    public static void main(String[] args) \{\
+        Scanner scanner = new Scanner(System.in);\
+\
+        // (a) Take a float input\
+        System.out.print("Enter a float value: ");\
+        float floatValue = scanner.nextFloat();\
+\
+        // Take a byte input\
+        System.out.print("Enter a byte value: ");\
+        byte byteValue = scanner.nextByte();\
+\
+        // Take a character input\
+        System.out.print("Enter a character: ");\
+        char charValue = scanner.next().charAt(0);  // Read first character of input\
+\
+        // (b) Display the inputs\
+        System.out.println("\\n--- User Inputs ---");\
+        System.out.println("Float value: " + floatValue);\
+        System.out.println("Byte value: " + byteValue);\
+        System.out.println("Character value: " + charValue);\
+\
+        // (c) Take a number and divide by 3\
+        System.out.print("\\nEnter an integer to divide by 3: ");\
+        int number = scanner.nextInt();\
+        float result = number / 3.0f;  // Ensure float division\
+\
+        // (d) Display the result\
+        System.out.println("Result of " + number + " divided by 3 is: " + result);\
+\
+        scanner.close();\
+    \}\
+\}\
+\
+Output:\
+Enter a float value: 10.5\
+Enter a byte value: 25\
+Enter a character: A\
+\
+--- User Inputs ---\
+Float value: 10.5\
+Byte value: 25\
+Character value: A\
+\
+Enter an integer to divide by 3: 7\
+Result of 7 divided by 3 is: 2.3333333\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya \
+}

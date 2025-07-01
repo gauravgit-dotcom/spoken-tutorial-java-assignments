@@ -1,0 +1,180 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 29: Constructor Overloading\
+====================================================================\
+\
+QUESTION:\
+Constructor Overloading\
+\
+(a) Create multiple constructors for class Employee\
+\
+(b) Overload the constructor\
+\
+ANSWER\
+Code (Employee.java)\
+\
+public class Employee \{\
+    int empId;\
+    String empName;\
+\
+    // No-argument constructor\
+    public Employee() \{\
+        empId = 0;\
+        empName = "Not Assigned";\
+        System.out.println("No-argument constructor called");\
+    \}\
+\
+    // Constructor with one parameter\
+    public Employee(int id) \{\
+        empId = id;\
+        empName = "Not Assigned";\
+        System.out.println("Constructor with one parameter called");\
+    \}\
+\
+    // Constructor with two parameters\
+    public Employee(int id, String name) \{\
+        empId = id;\
+        empName = name;\
+        System.out.println("Constructor with two parameters called");\
+    \}\
+\
+    public void display() \{\
+        System.out.println("Employee ID: " + empId);\
+        System.out.println("Employee Name: " + empName);\
+    \}\
+\}\
+\
+\
+Test Class (TestEmployee.java)\
+\
+public class TestEmployee \{\
+    public static void main(String[] args) \{\
+        // Testing different constructors\
+        Employee e1 = new Employee();\
+        e1.display();\
+\
+        System.out.println("--------------------------");\
+\
+        Employee e2 = new Employee(101);\
+        e2.display();\
+\
+        System.out.println("--------------------------");\
+\
+        Employee e3 = new Employee(102, "Ravi");\
+        e3.display();\
+    \}\
+\}\
+\
+Output:\
+\
+No-argument constructor called\
+Employee ID: 0\
+Employee Name: Not Assigned\
+--------------------------\
+Constructor with one parameter called\
+Employee ID: 101\
+Employee Name: Not Assigned\
+--------------------------\
+Constructor with two parameters called\
+Employee ID: 102\
+Employee Name: Ravi\
+\
+Overload the constructor\
+\
+Explanation \
+\
+In Java, constructor overloading is a technique in which a class can have more than one constructor with different parameter lists. It allows creating objects in multiple ways, providing flexibility in initialization.\
+\
+A constructor is said to be overloaded when:\
+\
+It has the same name as the class.\
+\
+It differs in number or type of parameters.\
+\
+\
+This is useful when you want to initialize objects with default values, partial data, or full data.\
+\
+\
+Code Example:\
+\
+public class Employee \{\
+    int empId;\
+    String empName;\
+\
+    // No-argument constructor\
+    Employee() \{\
+        empId = 0;\
+        empName = "Unknown";\
+    \}\
+\
+    // Constructor with one parameter\
+    Employee(int id) \{\
+        empId = id;\
+        empName = "Unknown";\
+    \}\
+\
+    // Constructor with two parameters\
+    Employee(int id, String name) \{\
+        empId = id;\
+        empName = name;\
+    \}\
+\
+    void display() \{\
+        System.out.println("Employee ID: " + empId);\
+        System.out.println("Employee Name: " + empName);\
+    \}\
+\}\
+\
+\
+Test Class:\
+\
+public class TestConstructor \{\
+    public static void main(String[] args) \{\
+        // Overloaded constructor usage\
+        Employee e1 = new Employee();\
+        Employee e2 = new Employee(101);\
+        Employee e3 = new Employee(102, "Kiran");\
+\
+        System.out.println("Using No-Argument Constructor:");\
+        e1.display();\
+\
+        System.out.println("-----------------------------");\
+\
+        System.out.println("Using Single-Parameter Constructor:");\
+        e2.display();\
+\
+        System.out.println("-----------------------------");\
+\
+        System.out.println("Using Two-Parameter Constructor:");\
+        e3.display();\
+    \}\
+\}\
+\
+\
+Output:\
+\
+Using No-Argument Constructor:\
+Employee ID: 0\
+Employee Name: Unknown\
+-----------------------------\
+Using Single-Parameter Constructor:\
+Employee ID: 101\
+Employee Name: Unknown\
+-----------------------------\
+Using Two-Parameter Constructor:\
+Employee ID: 102\
+Employee Name: Kiran\
+\
+This demonstrates how constructor overloading provides multiple ways to create an object with different levels of initialization. It's a key part of Java's object-oriented flexibility.\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya  }

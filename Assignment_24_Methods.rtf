@@ -1,0 +1,53 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 24: Methods\
+====================================================================\
+\
+QUESTION:\
+Methods\
+\
+(a) Create a method which prints the cube of an integer\
+\
+ANSWERS\
+import java.util.Scanner;\
+\
+public class CubeExample \{\
+\
+    // Method to calculate and print cube of an integer\
+    static void printCube(int number) \{\
+        int cube = number * number * number;  // Calculate cube\
+        System.out.println("Cube of " + number + " is: " + cube);\
+    \}\
+\
+    public static void main(String[] args) \{\
+        Scanner scanner = new Scanner(System.in);  // Create Scanner object for input\
+\
+        System.out.print("Enter an integer: ");  // Ask user to enter integer\
+        int num = scanner.nextInt();  // Read integer input\
+\
+        printCube(num);  // Call method to print cube\
+\
+        scanner.close();  // Close Scanner to avoid resource leak\
+    \}\
+\}\
+\
+\expnd0\expndtw0\kerning0
+Sample Output When Running the Program:\
+\pard\pardeftab720\partightenfactor0
+\cf0 Enter an integer: 4\
+Cube of 4 is: 64\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya \
+}

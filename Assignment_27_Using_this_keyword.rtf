@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================================================================\
+ASSIGNMENT 27: Using this keyword\
+\
+====================================================================\
+\
+QUESTION:\
+Using this keyword\
+\
+(a) Create an Employee class\
+\
+(b) Create a constructor with two parameters\
+\
+(c) Use this keyword to initialize the instance variables\
+\
+(d) Also create a constructor with 1 and no parameters\
+\
+(e) Try chaining the constructors using this as explained in the tutorial\
+\
+ANSWER\
+Create an Employee class\
+\
+We define a class named Employee to represent employee-related data.\
+\
+public class Employee \{\
+    int empId;\
+    String empName;\
+\}\
+\
+\
+(b) Create a constructor with two parameters\
+\
+A constructor with parameters allows us to initialize the attributes of an object at the time of creation.\
+\
+public Employee(int empId, String empName) \{\
+    this.empId = empId;\
+    this.empName = empName;\
+\}\
+\
+> Explanation:\
+Here, we use this.empId and this.empName to refer to the instance variables of the class and avoid confusion with constructor parameters.\
+\
+\
+(c) Use this keyword to initialize the instance variables\
+\
+this keyword helps in referencing the current object\'92s members. When the parameter names are the same as the instance variable names, this differentiates between them.\
+\
+Example:\
+\
+this.empId = empId;\
+this.empName = empName;\
+\
+\
+(d) Also create a constructor with 1 and no parameters\
+\
+We can overload constructors by creating versions with different parameter lists.\
+\
+public Employee(int empId) \{\
+    this(empId, "Unknown");\
+\}\
+\
+public Employee() \{\
+    this(0, "Not Assigned");\
+\}\
+\
+Explanation:\
+\
+The constructor with 1 parameter assigns a default name.\
+\
+The constructor with no parameters assigns default ID and name.\
+\
+Both use constructor chaining via this().\
+\
+\
+(e) Try chaining the constructors using this()\
+\
+Constructor chaining refers to calling one constructor from another using this() keyword. This helps in reusing code and reducing redundancy.\
+\
+Complete Java Code:\
+\
+public class Employee \{\
+    int empId;\
+    String empName;\
+\
+    // Constructor with two parameters\
+    public Employee(int empId, String empName) \{\
+        this.empId = empId;\
+        this.empName = empName;\
+    \}\
+\
+    // Constructor with one parameter\
+    public Employee(int empId) \{\
+        this(empId, "Unknown"); // Calls the two-parameter constructor\
+    \}\
+\
+    // Constructor with no parameters\
+    public Employee() \{\
+        this(0, "Not Assigned"); // Calls the two-parameter constructor\
+    \}\
+\
+    // Method to display employee details\
+    public void display() \{\
+        System.out.println("Employee ID: " + empId);\
+        System.out.println("Employee Name: " + empName);\
+        System.out.println("---------------");\
+    \}\
+\
+    public static void main(String[] args) \{\
+        Employee e1 = new Employee(101, "Gaurav");\
+        Employee e2 = new Employee(102);\
+        Employee e3 = new Employee();\
+\
+        e1.display();\
+        e2.display();\
+        e3.display();\
+    \}\
+\}\
+\
+Output:\
+\
+Employee ID: 101\
+Employee Name: Gaurav\
+---------------\
+Employee ID: 102\
+Employee Name: Unknown\
+---------------\
+Employee ID: 0\
+Employee Name: Not Assigned\
+\'97\'97\'97\'97\'97\'97\'97\
+\
+STUDENT DETAILS:\
+Name     : Gaurav Kumar\
+Email    : gk3759307@gmail.com\
+Course   : Java \'96 Spoken Tutorial, IIT Bombay\
+College  : Government Polytechnic Gaya  }
